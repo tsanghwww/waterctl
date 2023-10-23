@@ -141,7 +141,7 @@
     async function start() {
         try {
             bluetoothDevice = await navigator.bluetooth.requestDevice({
-                filters: [{ namePrefix: "Water" }],
+                filters: [{ namePrefix: "BT19-" }],
                 optionalServices: [window.navigator.userAgent.match(/Bluefy/) ? "generic_access" : 0xF1F0] // workaround for Bluefy
             });
             updateUi("pending");
